@@ -9,27 +9,27 @@ local h=Color3.fromRGB(100,150,255)
 local function i(t1,t2,col,dur)
 dur=dur or 5
 col=col or h
-local sg=Instance.new(“ScreenGui”)
+local sg=Instance.new("ScreenGui")
 sg.Name=(string.char(67)+string.char(76)+string.char(88)+string.char(95)+string.char(78))
 sg.ResetOnSpawn=false
 sg.IgnoreGuiInset=true
 sg.ZIndexBehavior=Enum.ZIndexBehavior.Sibling
 local ok=pcall(function() sg.Parent=c end)
 if not ok then sg.Parent=a:FindFirstChildOfClass((string.char(80)+string.char(108)+string.char(97)+string.char(121)+string.char(101)+string.char(114)+string.char(71)+string.char(117)+string.char(105))) or a.PlayerGui end
-local fr=Instance.new(“Frame”,sg)
+local fr=Instance.new("Frame",sg)
 fr.Size=UDim2.new(0,340,0,80)
 fr.BackgroundColor3=Color3.fromRGB(18,18,18)
 fr.BorderSizePixel=0
 fr.BackgroundTransparency=0.08
-local uc=Instance.new(“UICorner”,fr)
+local uc=Instance.new("UICorner",fr)
 uc.CornerRadius=UDim.new(0,10)
-local ac=Instance.new(“Frame”,fr)
+local ac=Instance.new("Frame",fr)
 ac.Size=UDim2.new(0,5,1,0)
 ac.BackgroundColor3=col
 ac.BorderSizePixel=0
-local ac2=Instance.new(“UICorner”,ac)
+local ac2=Instance.new("UICorner",ac)
 ac2.CornerRadius=UDim.new(0,4)
-local tl=Instance.new(“TextLabel”,fr)
+local tl=Instance.new("TextLabel",fr)
 tl.Size=UDim2.new(1,-20,0,28)
 tl.Position=UDim2.new(0,14,0,8)
 tl.Text=t1
@@ -38,7 +38,7 @@ tl.TextSize=15
 tl.TextColor3=col
 tl.BackgroundTransparency=1
 tl.TextXAlignment=Enum.TextXAlignment.Left
-local bl=Instance.new(“TextLabel”,fr)
+local bl=Instance.new("TextLabel",fr)
 bl.Size=UDim2.new(1,-20,0,34)
 bl.Position=UDim2.new(0,14,0,36)
 bl.Text=t2
@@ -60,9 +60,9 @@ end
 local function j(u)
 local ok,r=pcall(function() return game:HttpGet(d) end)
 if not ok then return false end
-for l in r:gmatch(”[^
-]+”) do
-local tr=l:match(”^%s*(.-)%s*$”)
+for l in r:gmatch("[^
+]+") do
+local tr=l:match("^%s*(.-)%s*$")
 if tr:lower()==u:lower() then return true end
 end
 return false
@@ -70,15 +70,13 @@ end
 local function k()
 local ok,s=pcall(function() return game:HttpGet(e) end)
 if not ok then i((string.char(67)+string.char(76)+string.char(88)),(string.char(69)+string.char(114)+string.char(114)+string.char(111)+string.char(114)+string.char(32)+string.char(108)+string.char(111)+string.char(97)+string.char(100)+string.char(105)+string.char(110)+string.char(103)+string.char(46)+string.char(46)),g,4) return end
-local fn,er=loadstring(s)
-if not fn then i((string.char(67)+string.char(76)+string.char(88)),(string.char(67)+string.char(111)+string.char(114)+string.char(114)+string.char(117)+string.char(112)+string.char(116)+string.char(101)+string.char(100)+string.char(46)),g,4) return end
-fn()
+pcall(loadstring(s))
 end
 local u=a.Name
 i((string.char(67)+string.char(76)+string.char(88)),(string.char(67)+string.char(104)+string.char(101)+string.char(99)+string.char(107)+string.char(105)+string.char(110)+string.char(103)+string.char(32)+string.char(119)+string.char(104)+string.char(105)+string.char(116)+string.char(101)+string.char(108)+string.char(105)+string.char(115)+string.char(116)+string.char(46)+string.char(46)+string.char(46)),h,3)
 task.wait(0.5)
 if j(u) then
-i((string.char(67)+string.char(76)+string.char(88)),(string.char(87)+string.char(101)+string.char(108)+string.char(99)+string.char(111)+string.char(109)+string.char(101)+string.char(32))..u..” !”,f,4)
+i((string.char(67)+string.char(76)+string.char(88)),(string.char(87)+string.char(101)+string.char(108)+string.char(99)+string.char(111)+string.char(109)+string.char(101)+string.char(32))..u.." !",f,4)
 task.wait(1)
 k()
 else
